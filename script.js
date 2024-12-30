@@ -1,13 +1,35 @@
-// Get all game boxes
-const gameBoxes = document.querySelectorAll('.game-box');
+// JavaScript for Online Web Games Website
 
-// Add click event listeners to each game box
-gameBoxes.forEach(box => {
-  box.addEventListener('click', () => {
-    // Get the game URL from the link within the box
-    const gameUrl = box.querySelector('a').href;
+// Smooth scrolling for navigation links
+document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
 
-    // Open the game in a new tab/window
-    window.open(gameUrl, '_blank'); 
-  });
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
 });
+
+// Form submission handling
+document.querySelector('form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    if (name && email && message) {
+        alert(`Thank you, ${name}! Your message has been received.`);
+        this.reset(); // Clear the form
+    } else {
+        alert('Please fill out all fields before submitting.');
+    }
+});
+
+// Placeholder for additional functionality, like dynamic game loading or animations
+
