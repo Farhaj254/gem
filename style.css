@@ -5,12 +5,12 @@ body {
     padding: 0; /* Removes default padding */
     line-height: 1.6; /* Sets the line height for better readability */
     color: #333; /* Sets the default text color */
-    background-color: #f4f4f4; /* Sets the background color of the page */
+    background-color: #a862ea; /* Sets the background color of the page */
 }
 
 /* Styles for the header section */
 header {
-    background: #333; /* Sets a dark background color */
+    background: #ead062; /* Sets a dark background color */
     color: #fff; /* Sets text color to white */
     padding: 1rem 0; /* Adds padding for spacing */
 }
@@ -85,7 +85,7 @@ header nav ul li a:hover {
 }
 
 .btn:hover {
-    background: #555; /* Changes background color on hover */
+    background: #a49245; /* Changes background color on hover */
 }
 
 /* Styles for the game list section */
